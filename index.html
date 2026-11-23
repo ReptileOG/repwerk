@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Repwerk</title>
+<meta name="description" content="Trainingsplan, Satz-Logging, Fortschritt zum Ziel, Kalorientracker und Körperwerte.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Repwerk">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1><img class="logo" src="icons/icon-192.png" alt="">Repwerk</h1>
+      <div class="brand-stat" id="brand-stat"></div>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Bereiche"></nav>
+  </div>
+</header>
+<main class="wrap" id="main"></main>
+<div id="restpill" class="restpill" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<div id="celebrate" class="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="cel-title"></div>
+<script src="app.js"></script>
+</body>
+</html>
