@@ -1,6 +1,6 @@
 // Repwerk Service Worker: macht die App offline-fähig.
 // Bei jeder Änderung an den App-Dateien VERSION erhöhen, damit Handys das Update laden.
-const VERSION = "repwerk-v4";
+const VERSION = "repwerk-v6";
 const CORE = [
   "./",
   "./index.html",

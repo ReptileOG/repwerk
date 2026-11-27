@@ -48,7 +48,7 @@ Danach brauchst du die Webseite nicht mehr. Die App startet vom Icon und läuft 
 ## Deine Daten
 
 - Alles wird im Speicher der App auf dem Gerät abgelegt.
-- **Backup:** *Mehr → Profil & Ziele → Backup speichern* erzeugt eine `.json`-Datei. Mit
+- **Backup:** *Profil → Backup speichern* erzeugt eine `.json`-Datei. Mit
   *Backup laden* spielst du sie auf einem anderen Handy wieder ein.
 - Achtung: Wenn du die App deinstallierst oder die Website-Daten im Browser löschst, sind die
   Einträge weg. Mach deshalb ab und zu ein Backup.
@@ -56,7 +56,7 @@ Danach brauchst du die Webseite nicht mehr. Die App startet vom Icon und läuft 
 ## Updates
 
 Wenn du etwas an den Dateien änderst:
-1. In `sw.js` die Zeile `const VERSION = "repwerk-v4";` hochzählen (v5, v6 …).
+1. In `sw.js` die Zeile `const VERSION = "repwerk-v6";` hochzählen (v7, v8 …).
 2. Den Ordner neu hochladen (Netlify: erneut draufziehen; GitHub: Dateien ersetzen).
 3. Auf dem Handy erscheint beim nächsten Öffnen **„Neue Version verfügbar“**. Die Daten bleiben
    dabei erhalten.

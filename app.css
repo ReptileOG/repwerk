@@ -216,19 +216,35 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:.8rem;color:var(--m
 .mg{display:inline-flex;align-items:center;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
 .session-bar{position:sticky;top:calc(108px + env(safe-area-inset-top,0px));z-index:5;margin-bottom:16px;padding:10px 14px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:var(--shadow)}
 
+/* Übungsarten, Bibliothek, Progressionen */
+.mg-type{background:var(--primary-soft);color:var(--primary-text)}
+.chip.on{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.lib-tools{align-items:flex-end}
+.lib-list{max-height:460px;overflow-y:auto;margin-top:4px;padding-right:4px}
+.tpl-grid{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+details.tpl-more summary{cursor:pointer;list-style:none;min-height:44px}
+details.tpl-more summary::-webkit-details-marker{display:none}
+.prog-ladders{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
+.ladder{background:var(--surface-2);border-radius:var(--r-sm);padding:12px 14px}
+.ladder ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:.9rem}
+.ladder li::marker{color:var(--primary-text);font-weight:700}
+
 /* Plan-Editor */
-.plan-ex{display:grid;grid-template-columns:minmax(0,3fr) repeat(3,minmax(56px,1fr)) 44px;gap:6px;align-items:center;margin-top:6px}
+.plan-ex{display:grid;grid-template-columns:minmax(0,3fr) minmax(120px,1.6fr) repeat(3,minmax(56px,1fr)) 44px;gap:6px;align-items:center;margin-top:6px}
+.plan-ex select{padding:8px 6px;font-size:.9rem}
 .plan-ex.head{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;text-align:center}
 .plan-ex.head span:first-child{text-align:left}
 .plan-ex input{padding:8px 6px;text-align:center}
 .plan-ex > input:first-child{text-align:left}
 .pf{display:block;min-width:0}
 .pf span{display:none}
-@media (max-width:560px){
+.day-card{container-type:inline-size}
+@container (max-width:620px){
   .plan-ex.head{display:none}
   .plan-ex{grid-template-columns:repeat(3,minmax(0,1fr)) 44px;row-gap:6px;padding:10px 0;border-top:1px solid var(--line);margin-top:0}
   .plan-ex > input:first-child{grid-column:1/4;font-weight:600}
   .plan-ex > button{grid-column:4;grid-row:1}
+  .plan-ex > .pt{grid-column:1/5}
   .pf span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:3px;text-align:center}
 }
 .tpl{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:64px;padding:12px 14px;gap:2px;width:100%}
@@ -250,7 +266,8 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:.8rem;color:var(--m
 .restpill button{background:transparent;color:inherit;border-color:currentColor;white-space:nowrap}
 .toast{position:fixed;left:50%;transform:translateX(-50%);top:calc(116px + env(safe-area-inset-top,0px));z-index:30;background:var(--fg);color:var(--bg);padding:12px 18px;border-radius:12px;font-weight:600;max-width:calc(100% - 32px);box-shadow:0 8px 28px rgba(0,0,0,.3);text-align:center}
 .celebrate{position:fixed;inset:0;z-index:40;background:var(--scrim);display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-.celebrate .card{max-width:380px;width:100%;text-align:center;padding:28px 22px}
+.celebrate{overflow-y:auto;place-items:start center;overscroll-behavior:contain}
+.celebrate .card{max-width:380px;width:100%;text-align:center;padding:28px 22px;margin-block:auto}
 .celebrate .medal{width:84px;height:84px;margin:0 auto 14px;border-radius:50%;background:var(--gold);color:#0F172A;display:grid;place-items:center}
 .celebrate .medal .ic{width:42px;height:42px}
 .celebrate h3{font-size:1.9rem;margin-bottom:6px}
