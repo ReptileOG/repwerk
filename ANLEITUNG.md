@@ -56,7 +56,7 @@ Danach brauchst du die Webseite nicht mehr. Die App startet vom Icon und läuft 
 ## Updates
 
 Wenn du etwas an den Dateien änderst:
-1. In `sw.js` die Zeile `const VERSION = "repwerk-v6";` hochzählen (v7, v8 …).
+1. In `sw.js` die Zeile `const VERSION = "repwerk-v7";` hochzählen (v8, v9 …).
 2. Den Ordner neu hochladen (Netlify: erneut draufziehen; GitHub: Dateien ersetzen).
 3. Auf dem Handy erscheint beim nächsten Öffnen **„Neue Version verfügbar“**. Die Daten bleiben
    dabei erhalten.

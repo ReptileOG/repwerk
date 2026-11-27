@@ -803,7 +803,7 @@ function openSecret(){
 }
 // 5× schnell aufs Logo tippen öffnet die Code-Abfrage
 let logoTaps=[];
-document.addEventListener("click",e=>{if(!e.target.closest(".brand h1 .logo"))return;const now=Date.now();logoTaps=logoTaps.filter(t=>now-t<2500);logoTaps.push(now);if(logoTaps.length>=5){logoTaps=[];openSecret()}});
+document.addEventListener("pointerdown",e=>{if(!e.target.closest(".brand h1")||!$("#celebrate").hidden)return;const now=Date.now();logoTaps=logoTaps.filter(t=>now-t<3000);logoTaps.push(now);if(logoTaps.length>=5){logoTaps=[];buzz(30);openSecret()}});
 function addWeight(date,kg){update("body",b=>{b.weights=b.weights.filter(w=>w.date!==date);b.weights.push({date,kg});b.weights.sort((a,c)=>a.date<c.date?-1:1)});toast("Gewicht gespeichert.");checkBadges()}
 document.addEventListener("submit",e=>{const f=e.target.closest("[data-f]");if(!f)return;e.preventDefault();forms[f.dataset.f]?.()});
 
